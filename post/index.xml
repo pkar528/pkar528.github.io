@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Priyanka Kar</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Priyanka Kar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reticulate Allows R and Python to be Best Friends</title>
+      <link>/post/2020/12/11/reticulate-allows-r-and-python-to-be-best-friends/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020/12/11/reticulate-allows-r-and-python-to-be-best-friends/</guid>
+      <description>Different coding languages do not have to exist apart from each other. When we moved on from Rstudio to Jupyter Notebook in class, I thought that I was moving on completely from R to Python. With this, I thought I would have to change my entire frame of mind about how to do any computations using data. However, with Reticulate, I can jump between R and Python and essentially have the two languages talk to one another!</description>
+    </item>
+    
+  </channel>
+</rss>

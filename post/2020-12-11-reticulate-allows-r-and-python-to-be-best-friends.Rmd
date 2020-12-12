@@ -15,9 +15,33 @@ library(reticulate)
 
 library(ggplot2)
 
-msleep <- msleep
 ```
+
+This is a code chunk in R where we opened reticulate.
 
 ```{python}
-
+import numpy as np
+list=np.array([[1,2],[3,4]])
 ```
+
+Now we can open this list in R!
+
+```{R}
+listr <- solve(py$list)
+listr
+```
+
+We can even multiply the two variables together!
+
+```{python}
+np.dot(list,r.listr).round()
+```
+
+This is just the minimum but we can make models in python too from R! Iris is a dataset in R, but we can do an anova model with it in python.
+
+```{R}
+fit<-lm(Petal.Width~Species, data=iris)
+anova(fit)
+```
+
+The fact that we can have R and python communicate with reticulate is really cool! 

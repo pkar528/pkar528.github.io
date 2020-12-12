@@ -75,9 +75,32 @@
 <p>Different coding languages do not have to exist apart from each other. When we moved on from Rstudio to Jupyter Notebook in class, I thought that I was moving on completely from R to Python. With this, I thought I would have to change my entire frame of mind about how to do any computations using data. However, with Reticulate, I can jump between R and Python and essentially have the two languages talk to one another!</p>
 <pre class="r"><code>library(reticulate)
 
-library(ggplot2)
-
-msleep &lt;- msleep</code></pre>
+library(ggplot2)</code></pre>
+<p>This is a code chunk in R where we opened reticulate.</p>
+<pre class="python"><code>import numpy as np
+list=np.array([[1,2],[3,4]])</code></pre>
+<p>Now we can open this list in R!</p>
+<pre class="r"><code>listr &lt;- solve(py$list)
+listr</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,] -2.0  1.0
+## [2,]  1.5 -0.5</code></pre>
+<p>We can even multiply the two variables together!</p>
+<pre class="python"><code>np.dot(list,r.listr).round()</code></pre>
+<pre><code>## array([[ 1.,  0.],
+##        [ 0.,  1.]])</code></pre>
+<p>This is just the minimum but we can make models in python too from R! Iris is a dataset in R, but we can do an anova model with it in python.</p>
+<pre class="r"><code>fit&lt;-lm(Petal.Width~Species, data=iris)
+anova(fit)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: Petal.Width
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## Species     2 80.413  40.207  960.01 &lt; 2.2e-16 ***
+## Residuals 147  6.157   0.042                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>The fact that we can have R and python communicate with reticulate is really cool!</p>
 
             
         <hr>         <div class="related-posts">
